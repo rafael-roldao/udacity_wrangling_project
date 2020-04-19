@@ -1,0 +1,4 @@
+.gitgnore
+
+download/
+tweet_add_info/
