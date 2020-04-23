@@ -13076,7 +13076,7 @@ div#notebook {
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -13114,7 +13114,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_twt</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;twitter-archive-enhanced.csv&#39;</span><span class="p">)</span>
@@ -13131,7 +13131,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -13381,7 +13381,7 @@ memory usage: 313.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_img</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;image-predictions.tsv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -13398,7 +13398,7 @@ memory usage: 313.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -14943,7 +14943,20 @@ Rate limit reached. Sleeping for: 71
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[640]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twt_add_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;twt_add_info.csv&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span> <span class="o">=</span> <span class="n">df_twt</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">twt_add_info</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
@@ -15000,7 +15013,7 @@ memory usage: 368.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[641]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span> <span class="o">=</span> <span class="n">twitter_merged</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_img</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
@@ -15068,7 +15081,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[642]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
@@ -15084,7 +15097,7 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[642]:</div>
+    <div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -15101,7 +15114,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[643]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">5</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
@@ -15117,7 +15130,7 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[643]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -15231,7 +15244,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[644]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="p">[</span><span class="n">twitter_merged</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -15247,7 +15260,7 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[644]:</div>
+    <div class="prompt output_prompt">Out[14]:</div>
 
 
 
@@ -15572,7 +15585,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[645]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">source</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">twitter_merged</span><span class="o">.</span><span class="n">expanded_urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15588,7 +15601,7 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[645]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -15606,7 +15619,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[646]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span> <span class="n">twitter_merged</span><span class="o">.</span><span class="n">floofer</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15622,7 +15635,7 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[646]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -15643,7 +15656,7 @@ memory usage: 570.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[647]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
@@ -15659,27 +15672,27 @@ memory usage: 570.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[647]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1861     None
-829      None
-1594     None
-2219     None
-2272     None
-782     doggo
-637      None
-1625     None
-527      None
-1446     None
-497      None
-771      None
-759      None
-1375     None
-1225     None
+<pre>2158    None
+2077    None
+1429    None
+1693    None
+2152    None
+0       None
+1687    None
+908     None
+1338    None
+1210    None
+1660    None
+335     None
+1239    None
+2137    None
+792     None
 Name: doggo, dtype: object</pre>
 </div>
 
@@ -15691,7 +15704,7 @@ Name: doggo, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[648]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">img_num</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -15707,7 +15720,7 @@ Name: doggo, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[648]:</div>
+    <div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -15728,7 +15741,7 @@ Name: img_num, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[649]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_merged</span><span class="o">.</span><span class="n">p1</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
@@ -15744,32 +15757,32 @@ Name: img_num, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[649]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Irish_terrier                   6
-orange                          1
-Pembroke                       89
-Dandie_Dinmont                  6
-radio_telescope                 1
-tick                            1
-killer_whale                    1
-soft-coated_wheaten_terrier    11
-flamingo                        1
-Leonberg                        3
-grille                          1
-tennis_ball                     9
-sea_lion                        3
-comic_book                      3
-dining_table                    1
-English_setter                  8
-English_springer               10
-suit                            1
-giant_schnauzer                 3
-web_site                       19
+<pre>coil                      1
+doormat                   8
+boathouse                 1
+microphone                1
+barbell                   1
+revolver                  1
+koala                     2
+cairn                     3
+minivan                   5
+kelpie                   11
+African_grey              1
+electric_fan              1
+Samoyed                  43
+dishwasher                3
+Norfolk_terrier           7
+walking_stick             1
+lacewing                  1
+tailed_frog               1
+Appenzeller               2
+flat-coated_retriever     8
 Name: p1, dtype: int64</pre>
 </div>
 
@@ -15795,20 +15808,61 @@ Name: p1, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Assess">Assess<a class="anchor-link" href="#Assess">&#182;</a></h2><h5 id="Null-values">Null values<a class="anchor-link" href="#Null-values">&#182;</a></h5><ul>
-<li>Meaningful Null values (jpg_url, img_num, p1, p1_conf, p1_dog, p2, p2_conf, p2_dog, p3, p3_conf, p3_dog) - <strong>ok</strong></li>
-<li>Some Null values (expanded_urls, retweet_count, favorite_count) - <strong>ok</strong></li>
-</ul>
-<h5 id="Other-issues">Other issues<a class="anchor-link" href="#Other-issues">&#182;</a></h5><ul>
+<h2 id="Assess">Assess<a class="anchor-link" href="#Assess">&#182;</a></h2><h5 id="Tidiness-issues">Tidiness issues<a class="anchor-link" href="#Tidiness-issues">&#182;</a></h5><ul>
+<li><ol>
 <li>Merge all databases/tables - <strong>ok</strong></li>
-<li>Retweets (retweeted_status_id is not Null) - <strong>ok</strong></li>
-<li>Replies ('in_reply_to_status_id', 'in_reply_to_user_id') - <strong>ok</strong></li>
-<li>'timestamp' format (datetime) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
 <li>'doggo', 'floofer', 'pupper', 'puppo' formats (merge all columns into 1 column 'dog_stage') - <strong>ok</strong> </li>
+</ol>
+</li>
+</ul>
+<h5 id="Quality-issues">Quality issues<a class="anchor-link" href="#Quality-issues">&#182;</a></h5><ul>
+<li><ol>
+<li>Retweets (retweeted_status_id is not Null) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>Replies ('in_reply_to_status_id', 'in_reply_to_user_id') - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>'timestamp' format (datetime) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
 <li>'p1_dog', 'p2_dog', 'p3_dog' formats (binary categories) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
 <li>'retweet_count', 'favorite_count' (int) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
 <li>Unnecessary columns - <strong>ok</strong></li>
-<li>Rows with rating denominator != 10 - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>Rows with different rating denominator basis (for comparison purpose - It is hard to compare variables in different basis) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>Meaningful Null values (jpg_url, img_num, p1, p1_conf, p1_dog, p2, p2_conf, p2_dog, p3, p3_conf, p3_dog) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>Some Null values (expanded_urls, retweet_count, favorite_count) - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>Some names are not existing names - <strong>ok</strong></li>
+</ol>
+</li>
+<li><ol>
+<li>'rating_numerator' inconsistent with 'text' -<strong>ok</strong></li>
+</ol>
+</li>
 </ul>
 
 </div>
@@ -15823,7 +15877,7 @@ Name: p1, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[650]:</div>
+<div class="prompt input_prompt">In&nbsp;[396]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_merged</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -15853,7 +15907,7 @@ Name: p1, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[651]:</div>
+<div class="prompt input_prompt">In&nbsp;[397]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">retweet</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;retweeted_status_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()][</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span>
@@ -15870,7 +15924,7 @@ Name: p1, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[651]:</div>
+    <div class="prompt output_prompt">Out[397]:</div>
 
 
 
@@ -15898,7 +15952,7 @@ Name: tweet_id, Length: 181, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[652]:</div>
+<div class="prompt input_prompt">In&nbsp;[398]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;retweeted_status_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -15918,7 +15972,7 @@ Name: tweet_id, Length: 181, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[653]:</div>
+<div class="prompt input_prompt">In&nbsp;[399]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16015,7 +16069,7 @@ memory usage: 526.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[654]:</div>
+<div class="prompt input_prompt">In&nbsp;[400]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;in_reply_to_status_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span>
@@ -16035,7 +16089,7 @@ memory usage: 526.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[655]:</div>
+<div class="prompt input_prompt">In&nbsp;[401]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16132,7 +16186,7 @@ memory usage: 507.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[656]:</div>
+<div class="prompt input_prompt">In&nbsp;[402]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">timestamp</span><span class="p">)</span>
@@ -16165,7 +16219,7 @@ memory usage: 507.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[657]:</div>
+<div class="prompt input_prompt">In&nbsp;[403]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16262,7 +16316,7 @@ memory usage: 507.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[658]:</div>
+<div class="prompt input_prompt">In&nbsp;[404]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">p1_dog</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">p1_dog</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">)</span>
@@ -16297,7 +16351,7 @@ memory usage: 507.9+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[659]:</div>
+<div class="prompt input_prompt">In&nbsp;[405]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16395,7 +16449,7 @@ memory usage: 465.1+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[660]:</div>
+<div class="prompt input_prompt">In&nbsp;[406]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">retweet_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
@@ -16411,7 +16465,7 @@ memory usage: 465.1+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[660]:</div>
+    <div class="prompt output_prompt">Out[406]:</div>
 
 
 
@@ -16439,7 +16493,7 @@ Name: retweet_count, Length: 2097, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[661]:</div>
+<div class="prompt input_prompt">In&nbsp;[407]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">notnull</span><span class="p">(</span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">retweet_count</span><span class="p">)]</span>
@@ -16452,7 +16506,7 @@ Name: retweet_count, Length: 2097, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[662]:</div>
+<div class="prompt input_prompt">In&nbsp;[408]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">retweet_count</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">retweet_count</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -16465,7 +16519,7 @@ Name: retweet_count, Length: 2097, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[663]:</div>
+<div class="prompt input_prompt">In&nbsp;[409]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">favorite_count</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">favorite_count</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
@@ -16498,7 +16552,7 @@ Name: retweet_count, Length: 2097, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[664]:</div>
+<div class="prompt input_prompt">In&nbsp;[410]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">retweet_count</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
@@ -16514,7 +16568,7 @@ Name: retweet_count, Length: 2097, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[664]:</div>
+    <div class="prompt output_prompt">Out[410]:</div>
 
 
 
@@ -16542,7 +16596,7 @@ Name: retweet_count, Length: 2090, dtype: int32</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[665]:</div>
+<div class="prompt input_prompt">In&nbsp;[411]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16639,7 +16693,7 @@ memory usage: 447.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[666]:</div>
+<div class="prompt input_prompt">In&nbsp;[412]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;in_reply_to_status_id&#39;</span><span class="p">,</span> 
@@ -16676,7 +16730,7 @@ memory usage: 447.3+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[667]:</div>
+<div class="prompt input_prompt">In&nbsp;[413]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -16768,7 +16822,7 @@ memory usage: 365.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[668]:</div>
+<div class="prompt input_prompt">In&nbsp;[414]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">:]</span>
@@ -16784,7 +16838,7 @@ memory usage: 365.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[668]:</div>
+    <div class="prompt output_prompt">Out[414]:</div>
 
 
 
@@ -16872,7 +16926,7 @@ memory usage: 365.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[669]:</div>
+<div class="prompt input_prompt">In&nbsp;[415]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">doggo</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">doggo</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;None&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
@@ -16888,7 +16942,7 @@ memory usage: 365.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[670]:</div>
+<div class="prompt input_prompt">In&nbsp;[416]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;doggo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
@@ -16904,7 +16958,7 @@ memory usage: 365.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[670]:</div>
+    <div class="prompt output_prompt">Out[416]:</div>
 
 
 
@@ -16932,7 +16986,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[671]:</div>
+<div class="prompt input_prompt">In&nbsp;[417]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">doggo</span> <span class="o">+</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">floofer</span> <span class="o">+</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">pupper</span> <span class="o">+</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">puppo</span>
@@ -16945,7 +16999,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[672]:</div>
+<div class="prompt input_prompt">In&nbsp;[418]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">dog_stage</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
@@ -16958,7 +17012,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[673]:</div>
+<div class="prompt input_prompt">In&nbsp;[419]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">dog_stage</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">dog_stage</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;doggofloofer&#39;</span><span class="p">,</span> <span class="s1">&#39;doggo, floofer&#39;</span><span class="p">)</span>
@@ -16973,7 +17027,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[674]:</div>
+<div class="prompt input_prompt">In&nbsp;[420]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;doggo&#39;</span><span class="p">,</span>
@@ -17009,7 +17063,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[675]:</div>
+<div class="prompt input_prompt">In&nbsp;[421]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -17025,7 +17079,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[675]:</div>
+    <div class="prompt output_prompt">Out[421]:</div>
 
 
 
@@ -17206,7 +17260,7 @@ Name: doggo, Length: 2090, dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[676]:</div>
+<div class="prompt input_prompt">In&nbsp;[422]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -17265,7 +17319,7 @@ memory usage: 316.6+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[677]:</div>
+<div class="prompt input_prompt">In&nbsp;[423]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -17281,7 +17335,7 @@ memory usage: 316.6+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[677]:</div>
+    <div class="prompt output_prompt">Out[423]:</div>
 
 
 
@@ -17319,7 +17373,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[691]:</div>
+<div class="prompt input_prompt">In&nbsp;[424]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;p1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span>
@@ -17362,7 +17416,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[719]:</div>
+<div class="prompt input_prompt">In&nbsp;[425]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="p">[</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;rating_denominator&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">10</span><span class="p">]</span>
@@ -17395,7 +17449,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[722]:</div>
+<div class="prompt input_prompt">In&nbsp;[426]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">rating_denominator</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
@@ -17411,7 +17465,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[722]:</div>
+    <div class="prompt output_prompt">Out[426]:</div>
 
 
 
@@ -17453,13 +17507,880 @@ Name: rating_denominator, Length: 1947, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Define">Define<a class="anchor-link" href="#Define">&#182;</a></h4><ul>
+<li>Change 'typos' to 'None' in the column 'name' - <strong>ok</strong></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Code">Code<a class="anchor-link" href="#Code">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[427]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[427]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>name
+None       513
+a           54
+Cooper      10
+Charlie     10
+Oliver      10
+Lucy         9
+Penny        9
+Tucker       9
+Sadie        8
+Winston      8
+Daisy        7
+Lola         7
+Toby         7
+the          7
+Stanley      6
+Name: tweet_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[428]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[428]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[429]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lower_name_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">name</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">islower</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+    
+    <span class="n">lower_name_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>such
+a
+quite
+quite
+one
+incredibly
+a
+a
+very
+my
+one
+not
+his
+one
+a
+a
+a
+an
+very
+a
+just
+getting
+very
+unacceptable
+all
+a
+a
+infuriating
+a
+a
+an
+a
+a
+very
+getting
+just
+a
+the
+the
+actually
+by
+a
+officially
+a
+the
+the
+a
+a
+a
+a
+a
+one
+a
+a
+a
+light
+just
+space
+a
+the
+a
+a
+a
+a
+a
+a
+a
+a
+a
+an
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+quite
+a
+an
+a
+the
+the
+a
+a
+an
+a
+a
+a
+a
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[430]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lower_name_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">lower_name_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[431]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lower_name_list</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[431]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;a&#39;, &#39;actually&#39;, &#39;all&#39;, &#39;an&#39;, &#39;by&#39;, &#39;getting&#39;, &#39;his&#39;, &#39;incredibly&#39;,
+       &#39;infuriating&#39;, &#39;just&#39;, &#39;light&#39;, &#39;my&#39;, &#39;not&#39;, &#39;officially&#39;, &#39;one&#39;,
+       &#39;quite&#39;, &#39;space&#39;, &#39;such&#39;, &#39;the&#39;, &#39;unacceptable&#39;, &#39;very&#39;],
+      dtype=&#39;&lt;U12&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[432]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">lower_name_list</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Test">Test<a class="anchor-link" href="#Test">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[433]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[433]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>name
+None       608
+Charlie     10
+Oliver      10
+Cooper      10
+Lucy         9
+Penny        9
+Tucker       9
+Winston      8
+Sadie        8
+Daisy        7
+Toby         7
+Lola         7
+Stanley      6
+Koda         6
+Bo           6
+Name: tweet_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[434]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 1947 entries, 0 to 2355
+Data columns (total 22 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   tweet_id            1947 non-null   int64              
+ 1   timestamp           1947 non-null   datetime64[ns, UTC]
+ 2   source              1947 non-null   object             
+ 3   text                1947 non-null   object             
+ 4   expanded_urls       1947 non-null   object             
+ 5   rating_numerator    1947 non-null   int64              
+ 6   rating_denominator  1947 non-null   int64              
+ 7   name                1947 non-null   object             
+ 8   retweet_count       1947 non-null   int32              
+ 9   favorite_count      1947 non-null   int32              
+ 10  jpg_url             1947 non-null   object             
+ 11  img_num             1947 non-null   float64            
+ 12  p1                  1947 non-null   object             
+ 13  p1_conf             1947 non-null   float64            
+ 14  p1_dog              1947 non-null   category           
+ 15  p2                  1947 non-null   object             
+ 16  p2_conf             1947 non-null   float64            
+ 17  p2_dog              1947 non-null   category           
+ 18  p3                  1947 non-null   object             
+ 19  p3_conf             1947 non-null   float64            
+ 20  p3_dog              1947 non-null   category           
+ 21  dog_stage           302 non-null    object             
+dtypes: category(3), datetime64[ns, UTC](1), float64(4), int32(2), int64(3), object(9)
+memory usage: 375.0+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Define">Define<a class="anchor-link" href="#Define">&#182;</a></h5><ul>
+<li>Change the 'rating_numerator' column to be consistent with the twitter 'text'</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Code">Code<a class="anchor-link" href="#Code">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[435]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[435]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[438]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;ratings&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="s1">&#39;((?:\d+\.)?\d+)\/(\d+)&#39;</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[439]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">twitter_clean</span><span class="p">[</span><span class="s1">&#39;ratings&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[439]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>str</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[440]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">ratings</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">ratings</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[441]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ratings&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[441]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>ratings
+0.00         1
+1.00         4
+2.00         9
+3.00        19
+4.00        15
+5.00        32
+6.00        32
+7.00        51
+8.00        95
+9.00       149
+9.75         1
+10.00      416
+11.00      392
+11.26        1
+11.27        1
+12.00      444
+13.00      249
+13.50        1
+14.00       33
+420.00       1
+1776.00      1
+Name: tweet_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[442]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rating_numerator&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[442]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>rating_numerator
+0         1
+1         4
+2         9
+3        19
+4        15
+5        33
+6        32
+7        51
+8        95
+9       149
+10      416
+11      392
+12      444
+13      249
+14       33
+26        1
+27        1
+75        1
+420       1
+1776      1
+Name: tweet_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[443]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;ratings == &quot;1776&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[443]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;This is Atticus. He&#39;s quite simply America af. 1776/10 https://t.co/GRXwMxLBkh&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[444]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;ratings == &quot;420&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[444]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;After so many requests... here you go.\n\nGood dogg. 420/10 https://t.co/yfAAo1gdeY&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[445]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;ratings == &quot;9.75&quot;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[445]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;This is Logan, the Chow who lived. He solemnly swears he&#39;s up to lots of good. H*ckin magical af 9.75/10 https://t.co/yBO5wuqaPS&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[446]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">rating_numerator</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">ratings</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[447]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;ratings&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Test">Test<a class="anchor-link" href="#Test">&#182;</a></h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[448]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rating_numerator&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[448]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>rating_numerator
+0.00         1
+1.00         4
+2.00         9
+3.00        19
+4.00        15
+5.00        32
+6.00        32
+7.00        51
+8.00        95
+9.00       149
+9.75         1
+10.00      416
+11.00      392
+11.26        1
+11.27        1
+12.00      444
+13.00      249
+13.50        1
+14.00       33
+420.00       1
+1776.00      1
+Name: tweet_id, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Final-test-(double-check)">Final test (double check)<a class="anchor-link" href="#Final-test-(double-check)">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[723]:</div>
+<div class="prompt input_prompt">In&nbsp;[449]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">:]</span>
@@ -17475,7 +18396,7 @@ Name: rating_denominator, Length: 1947, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[723]:</div>
+    <div class="prompt output_prompt">Out[449]:</div>
 
 
 
@@ -17676,7 +18597,7 @@ Name: rating_denominator, Length: 1947, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[724]:</div>
+<div class="prompt input_prompt">In&nbsp;[450]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -17706,7 +18627,7 @@ Data columns (total 22 columns):
  2   source              1947 non-null   object             
  3   text                1947 non-null   object             
  4   expanded_urls       1947 non-null   object             
- 5   rating_numerator    1947 non-null   int64              
+ 5   rating_numerator    1947 non-null   float64            
  6   rating_denominator  1947 non-null   int64              
  7   name                1947 non-null   object             
  8   retweet_count       1947 non-null   int32              
@@ -17723,8 +18644,8 @@ Data columns (total 22 columns):
  19  p3_conf             1947 non-null   float64            
  20  p3_dog              1947 non-null   category           
  21  dog_stage           302 non-null    object             
-dtypes: category(3), datetime64[ns, UTC](1), float64(4), int32(2), int64(3), object(9)
-memory usage: 295.0+ KB
+dtypes: category(3), datetime64[ns, UTC](1), float64(5), int32(2), int64(2), object(9)
+memory usage: 375.0+ KB
 </pre>
 </div>
 </div>
@@ -17735,7 +18656,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[725]:</div>
+<div class="prompt input_prompt">In&nbsp;[451]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">(</span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">duplicated</span><span class="p">())</span>
@@ -17751,7 +18672,7 @@ memory usage: 295.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[725]:</div>
+    <div class="prompt output_prompt">Out[451]:</div>
 
 
 
@@ -17768,7 +18689,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[726]:</div>
+<div class="prompt input_prompt">In&nbsp;[452]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -17784,7 +18705,7 @@ memory usage: 295.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[726]:</div>
+    <div class="prompt output_prompt">Out[452]:</div>
 
 
 
@@ -17834,7 +18755,7 @@ memory usage: 295.0+ KB
     <tr>
       <th>mean</th>
       <td>7.359621e+17</td>
-      <td>11.698511</td>
+      <td>11.653713</td>
       <td>10.0</td>
       <td>2481.368259</td>
       <td>8373.555213</td>
@@ -17846,7 +18767,7 @@ memory usage: 295.0+ KB
     <tr>
       <th>std</th>
       <td>6.760085e+16</td>
-      <td>41.153349</td>
+      <td>41.125325</td>
       <td>0.0</td>
       <td>4438.765094</td>
       <td>12307.849795</td>
@@ -17928,7 +18849,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[727]:</div>
+<div class="prompt input_prompt">In&nbsp;[453]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_clean</span><span class="o">.</span><span class="n">rating_numerator</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(),</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">rating_denominator</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span> 
@@ -17944,24 +18865,24 @@ memory usage: 295.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[727]:</div>
+    <div class="prompt output_prompt">Out[453]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(315        0
- 2338       1
- 2091       1
- 1869       1
- 2261       1
-         ... 
- 1712      26
- 763       27
- 695       75
- 2074     420
- 979     1776
- Name: rating_numerator, Length: 1947, dtype: int64, 0       10
+<pre>(315        0.0
+ 2261       1.0
+ 1869       1.0
+ 2091       1.0
+ 2338       1.0
+          ...  
+ 426       14.0
+ 76        14.0
+ 164       14.0
+ 2074     420.0
+ 979     1776.0
+ Name: rating_numerator, Length: 1947, dtype: float64, 0       10
  1675    10
  1674    10
  1673    10
@@ -18016,7 +18937,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[728]:</div>
+<div class="prompt input_prompt">In&nbsp;[454]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_archive_master</span> <span class="o">=</span> <span class="n">twitter_clean</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -18029,7 +18950,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[729]:</div>
+<div class="prompt input_prompt">In&nbsp;[455]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;twitter_archive_master.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -18055,14 +18976,14 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[732]:</div>
+<div class="prompt input_prompt">In&nbsp;[457]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
 
 <span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s1">&#39;sqlite:///twitter_archive_master.db&#39;</span><span class="p">)</span>
-<span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;master0&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">twitter_archive_master_db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * From master0&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+<span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s1">&#39;master5&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">twitter_archive_master_db</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * From master5&#39;</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -18072,7 +18993,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[733]:</div>
+<div class="prompt input_prompt">In&nbsp;[458]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_archive_master_db</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -18088,7 +19009,7 @@ memory usage: 295.0+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[733]:</div>
+    <div class="prompt output_prompt">Out[458]:</div>
 
 
 
@@ -18142,7 +19063,7 @@ memory usage: 295.0+ KB
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Phineas. He's a mystical boy. Only eve...</td>
       <td>https://twitter.com/dog_rates/status/892420643...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Phineas</td>
       <td>7744</td>
@@ -18166,7 +19087,7 @@ memory usage: 295.0+ KB
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Tilly. She's just checking pup on you....</td>
       <td>https://twitter.com/dog_rates/status/892177421...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Tilly</td>
       <td>5733</td>
@@ -18190,7 +19111,7 @@ memory usage: 295.0+ KB
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Archie. He is a rare Norwegian Pouncin...</td>
       <td>https://twitter.com/dog_rates/status/891815181...</td>
-      <td>12</td>
+      <td>12.0</td>
       <td>10</td>
       <td>Archie</td>
       <td>3794</td>
@@ -18214,7 +19135,7 @@ memory usage: 295.0+ KB
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Darla. She commenced a snooze mid meal...</td>
       <td>https://twitter.com/dog_rates/status/891689557...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Darla</td>
       <td>7907</td>
@@ -18238,7 +19159,7 @@ memory usage: 295.0+ KB
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Franklin. He would like you to stop ca...</td>
       <td>https://twitter.com/dog_rates/status/891327558...</td>
-      <td>12</td>
+      <td>12.0</td>
       <td>10</td>
       <td>Franklin</td>
       <td>8530</td>
@@ -18269,7 +19190,7 @@ memory usage: 295.0+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[734]:</div>
+<div class="prompt input_prompt">In&nbsp;[459]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">twitter_archive_master_db</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -18299,7 +19220,7 @@ Data columns (total 22 columns):
  2   source              1947 non-null   object 
  3   text                1947 non-null   object 
  4   expanded_urls       1947 non-null   object 
- 5   rating_numerator    1947 non-null   int64  
+ 5   rating_numerator    1947 non-null   float64
  6   rating_denominator  1947 non-null   int64  
  7   name                1947 non-null   object 
  8   retweet_count       1947 non-null   int64  
@@ -18316,7 +19237,7 @@ Data columns (total 22 columns):
  19  p3_conf             1947 non-null   float64
  20  p3_dog              1947 non-null   object 
  21  dog_stage           302 non-null    object 
-dtypes: float64(4), int64(5), object(13)
+dtypes: float64(5), int64(4), object(13)
 memory usage: 334.8+ KB
 </pre>
 </div>
@@ -18348,7 +19269,7 @@ memory usage: 334.8+ KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[735]:</div>
+<div class="prompt input_prompt">In&nbsp;[460]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ratings</span> <span class="o">=</span> <span class="n">twitter_archive_master</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;rating_numerator&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -18365,33 +19286,34 @@ memory usage: 334.8+ KB
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[735]:</div>
+    <div class="prompt output_prompt">Out[460]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
 <pre>rating_numerator
-0         1
-1         4
-2         9
-3        19
-4        15
-5        33
-6        32
-7        51
-8        95
-9       149
-10      416
-11      392
-12      444
-13      249
-14       33
-26        1
-27        1
-75        1
-420       1
-1776      1
+0.00         1
+1.00         4
+2.00         9
+3.00        19
+4.00        15
+5.00        32
+6.00        32
+7.00        51
+8.00        95
+9.00       149
+9.75         1
+10.00      416
+11.00      392
+11.26        1
+11.27        1
+12.00      444
+13.00      249
+13.50        1
+14.00       33
+420.00       1
+1776.00      1
 Name: tweet_id, dtype: int64</pre>
 </div>
 
@@ -18403,7 +19325,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[810]:</div>
+<div class="prompt input_prompt">In&nbsp;[461]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ratings_clean</span> <span class="o">=</span> <span class="n">twitter_archive_master</span><span class="p">[</span><span class="n">twitter_archive_master</span><span class="p">[</span><span class="s1">&#39;rating_numerator&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">]</span>
@@ -18420,13 +19342,13 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[810]:</div>
+    <div class="prompt output_prompt">Out[461]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1942</pre>
+<pre>1945</pre>
 </div>
 
 </div>
@@ -18437,7 +19359,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[829]:</div>
+<div class="prompt input_prompt">In&nbsp;[462]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ratings_clean</span><span class="o">.</span><span class="n">rating_numerator</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">));</span>
@@ -18462,7 +19384,7 @@ Name: tweet_id, dtype: int64</pre>
 
 
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,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
+<img src="data:image/png;base64,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
 "
 >
 </div>
@@ -18475,7 +19397,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[811]:</div>
+<div class="prompt input_prompt">In&nbsp;[463]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">retweet_clean</span> <span class="o">=</span> <span class="n">twitter_archive_master</span><span class="p">[</span><span class="n">twitter_archive_master</span><span class="p">[</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">30000</span><span class="p">]</span>
@@ -18492,7 +19414,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[811]:</div>
+    <div class="prompt output_prompt">Out[463]:</div>
 
 
 
@@ -18509,7 +19431,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[828]:</div>
+<div class="prompt input_prompt">In&nbsp;[464]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">retweet_clean</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;retweet_count&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;favorite_count&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
@@ -18560,7 +19482,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[893]:</div>
+<div class="prompt input_prompt">In&nbsp;[465]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dog_stage_clean</span> <span class="o">=</span> <span class="n">twitter_archive_master</span>
@@ -18578,7 +19500,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[893]:</div>
+    <div class="prompt output_prompt">Out[465]:</div>
 
 
 
@@ -18632,7 +19554,7 @@ Name: tweet_id, dtype: int64</pre>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Phineas. He's a mystical boy. Only eve...</td>
       <td>https://twitter.com/dog_rates/status/892420643...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Phineas</td>
       <td>7744</td>
@@ -18656,7 +19578,7 @@ Name: tweet_id, dtype: int64</pre>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Tilly. She's just checking pup on you....</td>
       <td>https://twitter.com/dog_rates/status/892177421...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Tilly</td>
       <td>5733</td>
@@ -18680,7 +19602,7 @@ Name: tweet_id, dtype: int64</pre>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Archie. He is a rare Norwegian Pouncin...</td>
       <td>https://twitter.com/dog_rates/status/891815181...</td>
-      <td>12</td>
+      <td>12.0</td>
       <td>10</td>
       <td>Archie</td>
       <td>3794</td>
@@ -18704,7 +19626,7 @@ Name: tweet_id, dtype: int64</pre>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Darla. She commenced a snooze mid meal...</td>
       <td>https://twitter.com/dog_rates/status/891689557...</td>
-      <td>13</td>
+      <td>13.0</td>
       <td>10</td>
       <td>Darla</td>
       <td>7907</td>
@@ -18728,7 +19650,7 @@ Name: tweet_id, dtype: int64</pre>
       <td>&lt;a href="http://twitter.com/download/iphone" r...</td>
       <td>This is Franklin. He would like you to stop ca...</td>
       <td>https://twitter.com/dog_rates/status/891327558...</td>
-      <td>12</td>
+      <td>12.0</td>
       <td>10</td>
       <td>Franklin</td>
       <td>8530</td>
@@ -18759,7 +19681,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[894]:</div>
+<div class="prompt input_prompt">In&nbsp;[466]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dog_stage_clean</span><span class="o">.</span><span class="n">tweet_id</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -18775,7 +19697,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[894]:</div>
+    <div class="prompt output_prompt">Out[466]:</div>
 
 
 
@@ -18792,7 +19714,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[895]:</div>
+<div class="prompt input_prompt">In&nbsp;[467]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">likes_by_dog_stage</span> <span class="o">=</span> <span class="n">dog_stage_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">)[</span><span class="s1">&#39;favorite_count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -18810,7 +19732,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[895]:</div>
+    <div class="prompt output_prompt">Out[467]:</div>
 
 
 
@@ -18836,7 +19758,7 @@ Name: favorite_count, dtype: int32</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[896]:</div>
+<div class="prompt input_prompt">In&nbsp;[468]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">posts_by_dog_stage</span> <span class="o">=</span> <span class="n">dog_stage_clean</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;dog_stage&#39;</span><span class="p">)[</span><span class="s1">&#39;tweet_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
@@ -18854,7 +19776,7 @@ Name: favorite_count, dtype: int32</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[896]:</div>
+    <div class="prompt output_prompt">Out[468]:</div>
 
 
 
@@ -18880,7 +19802,7 @@ Name: tweet_id, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[897]:</div>
+<div class="prompt input_prompt">In&nbsp;[469]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">likes_per_post</span> <span class="o">=</span> <span class="n">likes_by_dog_stage</span> <span class="o">/</span> <span class="n">posts_by_dog_stage</span>
@@ -18898,7 +19820,7 @@ Name: tweet_id, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[897]:</div>
+    <div class="prompt output_prompt">Out[469]:</div>
 
 
 
@@ -18924,7 +19846,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[898]:</div>
+<div class="prompt input_prompt">In&nbsp;[470]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">likes_per_post</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">));</span>
